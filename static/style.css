@@ -1,0 +1,206 @@
+/* =========================
+   FULL PAGE BACKGROUND SETUP
+========================= */
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 50%, #A5D6A7 100%);
+    color: #1B4332;
+    font-family: 'Segoe UI', -apple-system, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(232, 245, 233, 0.92);
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   HEADER - Premium gradient
+========================= */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 24px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(102, 187, 106, 0.12) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 20px rgba(60, 179, 113, 0.15);
+}
+
+/* =========================
+   LOGO - Glassmorphism premium
+========================= */
+.logo {
+    height: 72px;
+    width: 72px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #66BB6A, #81C784);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(102, 187, 106, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* =========================
+   HEADINGS - Rich premium green
+========================= */
+h1 {
+    color: #1B4332;
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #2E7D32, #388E3C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #2E7D32;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* =========================
+   MAIN CARD - Elevated premium
+========================= */
+.container {
+    max-width: 580px;
+    margin: 48px auto;
+    padding: 36px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 24px;
+    border: 1px solid rgba(102, 187, 106, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(60, 179, 113, 0.12),
+        0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+/* =========================
+   INPUTS - Premium glass effect
+========================= */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(102, 187, 106, 0.4);
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: linear-gradient(145deg, #F8FCFA, #F1F8F5);
+    color: #1B4332;
+    outline: none;
+    font-weight: 500;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(60, 179, 113, 0.08);
+}
+
+input:focus,
+select:focus {
+    border-color: #66BB6A;
+    background: linear-gradient(145deg, #FFFFFF, #F8FDF9);
+    box-shadow: 
+        0 0 0 4px rgba(102, 187, 106, 0.2),
+        0 8px 24px rgba(60, 179, 113, 0.15);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   BUTTON - Luxury gradient
+========================= */
+button {
+    background: linear-gradient(135deg, #66BB6A 0%, #4CAF50 50%, #43A047 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    padding: 16px 40px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 8px 24px rgba(102, 187, 106, 0.4),
+        0 4px 12px rgba(67, 160, 71, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4CAF50 0%, #45A049 50%, #388E3C 100%);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 16px 32px rgba(102, 187, 106, 0.5),
+        0 8px 20px rgba(67, 160, 71, 0.35);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 4px 12px rgba(102, 187, 106, 0.4),
+        0 2px 6px rgba(67, 160, 71, 0.3);
+}
+
+/* =========================
+   RESULT - Premium status cards
+========================= */
+.result {
+    margin-top: 28px;
+    padding: 24px;
+    background: linear-gradient(135deg, #F1FAF5 0%, #E8F5E9 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(102, 187, 106, 0.3);
+    box-shadow: 0 12px 28px rgba(60, 179, 113, 0.15);
+}
+
+.result h2 {
+    color: #2E7D32;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+}
+
+.result p {
+    margin: 12px 0;
+    color: #2D5A47;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 450;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 640px) {
+    .container {
+        margin: 24px 16px;
+        padding: 24px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
